@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --error-color: rgb(255, 79, 79);
+    --success-color: rgb(60, 255, 60);
+    --border-color: #ddd;
+    --border-focus-color: rgb(0, 204, 255);
+    --font-color: #aaa;
+}
+
+body{
+    background: url("https://source.unsplash.com/collection/190727/1600x900");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+} 
+div.container-user{
+    background-color: #fff;
+    border-radius: 13px;
+    overflow: hidden;
+    width: calc(100vw - 60vw);
+    max-width: 100%;
+    box-shadow: 0px  0px 13px rgba(0, 0, 0, 0.3);
+}
+
+.header{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    padding: 30px 0;
+}
+
+.header h2{
+    color: #222;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-user{
+    padding: 50px;
+}
+
+.form-control-user{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-user .btn-user{
+    background-image: linear-gradient(to left, #f6d365 0%, #fda085);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+
+.form-user .btn-user:hover{
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085);;
+}
+
+.form-user input{
+    background: none;
+    outline: none;
+    border: 1.5px solid var(--border-color);
+    border-radius: 5px;
+    width: 100%;
+    height: 2.3rem;
+    transition: border-color 0.1s ease;
+}
+
+.form-control-user span{
+    font-size: 18px;
+    position: absolute;
+    top: calc(25% + 10%);
+    left: 12px;
+    transform: translateY(-50%);
+    color: var(--font-color);
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+
+.form-control-user input.dirty{
+    border: 1.5px solid var(--border-focus-color);
+}
+
+.form-control-user input.dirty + span{
+    top: 0;
+    color: var(--border-focus-color);
+    background: #fff;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.form-control-user input.clean + span{
+    top: 0;
+    color: var(--border-color);
+    background: #fff;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.form-control-user input.clean{
+    border: 1.5px solid var(--border-color);
+}
+
+.form-control-user i{
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.form-user .error .fa-exclamation-circle{
+    visibility: visible;
+    color: var(--error-color);
+}
+.form-user .success .fa-check-circle{
+    visibility: visible;
+    color: var(--success-color);
+}
+
+.form-user .error input{
+    border-color: var(--error-color);
+}
+.form-user .success input{
+    border-color: var(--success-color);
+}
+
+.form-control-user small{
+    visibility: hidden;
+}
+
+.form-user .error small{
+    visibility: visible;
+    color: var(--error-color);
+}
+
+
+
+
